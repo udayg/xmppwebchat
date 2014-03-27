@@ -1,0 +1,62 @@
+/* 
+    Document   : chatMain
+    Created on : Jan 11, 2012, 1:13:01 PM
+    Author     : uday
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+#tabs { margin-top: 1em; }
+            #tabs li .ui-icon-close { float: left; margin: 0.4em 0.2em 0 0; cursor: pointer; }
+            #add_tab { cursor: pointer; }
+            .chatAlert {
+                background: url("backgrnd.gif") #DFEFFC;
+                background-size: 100%;
+                /* for IE */
+                filter:alpha(opacity=50);
+                /* CSS3 standard */
+                opacity:0.5;   
+            }
+            label {
+                width: 9em;
+                float: left;
+                text-align: right;
+                margin-right: 0.5em;
+                display: block;
+            }
+
+            fieldset
+            {
+                border: 1px solid #2e6e9e;
+                width: 12em;
+            }
+
+            legend
+            {
+                color: #FFFFFF;
+                background: #2e6e9e;
+                border: 1px solid #2e6e9e;
+                padding: 2px 6px;
+            } 
+            body {font-size:75%;}
+            input {
+                color: #000000;
+                background: #FFFFFF;
+                text-shadow: none;
+            }
+
+            select option {
+                padding-left:20px;
+            }
+            select   {
+                height: 18px;
+                font: 200 11px Arial, Helvetica, sans-serif;  
+                margin: 0px; 
+                padding-right: 0px 0px 0px 0px;
+                border: 1px #FFFFFF solid;  
+            }

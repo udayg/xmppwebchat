@@ -1,0 +1,86 @@
+<!--
+  Copyright (C) 2011  Adam Hocek. Contact: ahocek@gmail.com,  Udaya K Ghattamaneni. 
+  Contact: ghattamaneni.uday@gmail.com 
+  
+  This library is free software; you can redistribute it and/or
+  modify it under the terms of the GNU Lesser General Public
+  License as published by the Free Software Foundation; either
+  version 2.1 of the License, or (at your option) any later version.
+  
+  This library is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+  Lesser General Public License for more details.
+  
+  You should have received a copy of the GNU Lesser General Public
+  License along with this library; if not, write to the Free Software
+  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301 USA
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Login</title>
+        <style>
+            label {
+                width: 6em;
+                float: left;
+                text-align: right;
+                margin-right: 0.5em;
+                display: block;
+            }
+
+            fieldset
+            {
+                border: 1px solid #2e6e9e;
+                width: 19em;
+            }
+
+            legend
+            {
+                color: #FFFFFF;
+                background: #2e6e9e;
+                border: 1px solid #2e6e9e;
+                padding: 2px 6px;
+            } 
+        </style>
+        <script>
+            function check(){
+
+                var user =document.getElementById("userName").value;
+                var pass =document.getElementById("password").value;
+                var domain =document.getElementById("domain").value;
+                if(user==''){ alert("Please Enter UserName"); return false;}
+                if(pass==''){ alert("Please Enter Password"); return false;}
+                if(domain==''){ alert("Please Enter Domain"); return false;}
+
+            }
+        </script>
+    </head>
+    <body>
+        <div style='position:absolute;top:30%;left:40%;'>
+            <form action="chat.jsp" method="POST" onsubmit="return check();">
+                <fieldset>
+                    <legend>Login</legend>
+                    <label>UserName :</label> <input id='userName' type="text" name="userName" /><br/>
+                    <label>Password :</label> <input id='password' type="password" name="password" /><br/>
+                    <label>Domain :</label> <input id='domain' type="text" name="domain" value=''/><br/>
+                    <input style='position:relative;left:110px;top:5px' type="submit" value="Login" />
+                </fieldset>
+            </form>
+        </div>
+        <div style ="font-size:75%;position:absolute;top:60%;left:35%;">
+            <b>Help :</b><br/>
+            <u>Gtalk :</u> Provide Domain as "gmail.com" and provide your GMail/Gtalk username<br/>
+            <u>Facebook Chat :</u> Provide Domain as "chat.facebook.com" and your username(not login ID)<br/>
+                            mentioned in your 'Account settings' page of Facebook<br/>
+            <u>Marist Domain : </u>Provide Domain as "chat.marist.edu". You must already have Marist account.<br/>
+            <u>Others :</u> Provide Domain with the domain name or IP Address of the XMPP server.
+        </div>
+        <div style ="font-size:70%;position:absolute;top:80%;left:40%;">
+            © Copyright 2012 Marist College,
+            XMPPWebChat 1.2
+        </div>
+    </body>
+</html>
