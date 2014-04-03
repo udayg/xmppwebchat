@@ -7,7 +7,7 @@ XMPPWebChat is a Web Application which enables chat in a webpage and is capable 
 The client-side implementation is based on jquery (dojox), while the server-side java implementation is based on [Cometd](http://cometd.org/) push technology. 
 
 
-You can download the War archive from this [Google code repository](https://xmppwebchat.googlecode.com/files/XMPPWebChat-1.2.war)  and deploy in your application server(Tested on Tomcat). After successful deploy browse through the application (eg: http://localhost:8080/XMPPWebChat-1.2/ )which will take you to the login page.
+You can download the War archive from this [XMPPWebChat-1.3.war](https://drive.google.com/file/d/0BwHJeilltye8SmJHX1h5U3RoMUU/edit?usp=sharing)  and deploy in your application server(Tested on Tomcat). After successful deploy browse through the application (eg: http://localhost:8080/XMPPWebChat-1.3/ )which will take you to the login page.
 
 
 ####Features 
