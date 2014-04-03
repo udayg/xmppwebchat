@@ -104,11 +104,7 @@
                         domain = "";
                     }
                     XmppManager xmppManager1 = null;
-                    if (domain.toString().equalsIgnoreCase("gmail.com")) {
-                        xmppManager1 = new XmppManager(domain, b);
-                    } else {
-                        xmppManager1 = new XmppManager(domain, 5222, b);
-                    }
+                    xmppManager1 = new XmppManager(domain, 5222, b);
 
                     try {
                         if (domain.toString().equalsIgnoreCase("chat.facebook.com")) {

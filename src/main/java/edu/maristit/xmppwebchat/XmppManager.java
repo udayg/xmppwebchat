@@ -89,18 +89,31 @@ public class XmppManager implements Serializable{
 
         connection.connect();
 
+        // Fixing the issue with appending @domain with some xmppservers
+        // so removing that just for xmpp authentication
         if (!username.equals("")) {
-            connection.login(username, password);
-        }
-        this.userName = username;
-        if (server.equalsIgnoreCase("chat.facebook.com")) {
-            setChatListener(new ChatListener(b, username + "@chat.facebook.com"));
-        } else {
-            setChatListener(new ChatListener(b, username));
-        }
-        getChatListener().init(connection);
-        connection.getChatManager().addChatListener(getChatListener());
-
+            String loginId="";
+            if(username.contains("@")){
+                String [] t = username.split("@");
+                if(t.length>1)
+                    loginId=t[0];
+                else
+                    loginId=username;
+            }else{
+                loginId=username;
+            }
+            //System.out.println("LoginId:"+loginId);
+            connection.login(loginId, password);
+        
+			this.userName = username;
+			if (server.equalsIgnoreCase("chat.facebook.com")) {
+				setChatListener(new ChatListener(b, username + "@chat.facebook.com"));
+			} else {
+				setChatListener(new ChatListener(b, username));
+			}
+			getChatListener().init(connection);
+			connection.getChatManager().addChatListener(getChatListener());
+		}
     }
 
     public void setStatus(boolean available, String status) {
